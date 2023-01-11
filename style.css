@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,500;1,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow:hidden;
+    background: linear-gradient(rgb(237, 106, 237),rgb(227, 153, 227),rgb(226, 207, 226));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open_modal{
+    padding: 20px 40px;
+    background-color: rgb(115, 13, 211);
+    border-radius: 5px;
+    border: 2px solid rgb(89, 0, 171);
+
+    color: whitesmoke;
+    font-weight: bold;
+    
+    /* position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+}
+
+.modal{
+    background: rgba(0, 0, 0, 0.179);
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+
+    
+}
+
+.modal_inner{
+    width: 400px;
+    position: relative;
+    margin: auto;
+    background: white;
+    top: 50%;
+    border-radius: 5px;
+    overflow: hidden;
+
+    animation: modalShow 0.3s linear;
+    
+}
+
+.modal_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: rgb(193, 94, 94);
+    font-family: 'Poppins', sans-serif;
+    color: rgb(254, 253, 253);
+}
+
+.modal_body{
+    padding: 12px;
+}
+.modal_body h2{
+    color: rgb(193, 94, 94);
+    margin-bottom: 10px;
+}
+
+.modal_footer{
+    padding: 12px;
+    text-align: right;
+}
+.modal_footer button{
+    padding: 6px 12px;
+    text-align: right;
+    background: rgb(193, 94, 94) ;
+    border-radius: 5px;
+    border: none;
+    color: whitesmoke;
+    font-family: poppins;
+
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.modal_footer button:hover{
+    transform: scale(0.9);
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes modalShow {
+    from{
+        top: -200px;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
